@@ -2,6 +2,7 @@ html,body{
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    background-color: #f4f4f4;
 }
 
 .dark-back.active{
@@ -12,6 +13,15 @@ html,body{
     top: 0;
     left: 0;
     z-index: 0;
+}
+
+.side-bar{
+    position: fixed;
+    width: 80px;
+    height: 100vh;
+    background-color: white;
+    left: 0;
+    top: 0;
 }
 
 .nav-btn{
@@ -58,6 +68,39 @@ html,body{
     }
 }
 
+.search-block{
+    color: black;
+    position: fixed;
+    bottom: 25px;
+    left: 30px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .search-icon{
+        font-size: 16px;
+        margin-right: 15px;
+    }
+
+    input{
+        outline: none;
+        border-radius: 20px;
+        border: 1px solid #ced4da;
+        background: none;
+        font-size: 16px;
+        padding: 8px 8px 8px 10px ;
+        width: 200px;
+        opacity: 0;
+        pointer-events: none;
+        transition: all .3s;
+
+        &.active{
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
+}
+ 
 nav{
     width: 420px;
     height: 100vh;
@@ -102,4 +145,14 @@ nav{
         }
     }
 }
+
+main{
+    display: block;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+
+
+
 
