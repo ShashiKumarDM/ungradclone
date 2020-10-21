@@ -10,3 +10,10 @@ navBtn.addEventListener("click",function(){
     navBar.classList.toggle("active");
     searchBox.classList.toggle("active");
 });
+
+darkBg.addEventListener("click", function(){
+    hamBurger.classList.remove("active");
+    darkBg.classList.remove("active");
+    navBar.classList.remove("active");
+    searchBox.classList.remove("active");
+});
